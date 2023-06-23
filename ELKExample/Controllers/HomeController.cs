@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ELKExample.Controllers
 {
+    //Demo
     [Route("api/[controller]")]
     [ApiController]
     public class HomeController : ControllerBase
