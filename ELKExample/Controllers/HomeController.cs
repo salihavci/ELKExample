@@ -20,8 +20,8 @@ namespace ELKExample.Controllers
         {
             try
             {
-                var isException = true;
-                return !isException! ? Ok("Test") : throw new Exception("Deneme bir hata fırlatıldı. Test apisinden");
+                var isException = false;
+                return isException! ? Ok("Test") : throw new Exception("Deneme bir hata fırlatıldı. Test apisinden");
             }
             catch (Exception ex)
             {

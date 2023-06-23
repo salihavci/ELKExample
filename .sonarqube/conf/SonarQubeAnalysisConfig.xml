@@ -121,9 +121,7 @@
     <Property Name="sonar.core.startTime">23.06.2023 17:23:49</Property>
     <Property Name="sonar.core.id">147B411E-AYjoo9PGZKP5fNticxr5</Property>
   </ServerSettings>
-  <LocalSettings>
-    <Property Name="sonar.host.url">http://localhost:9000</Property>
-  </LocalSettings>
+  <LocalSettings />
   <AnalyzersSettings>
     <AnalyzerSettings>
       <Language>cs</Language>
