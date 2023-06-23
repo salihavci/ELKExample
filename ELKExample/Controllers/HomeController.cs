@@ -23,10 +23,10 @@ namespace ELKExample.Controllers
                 var isException = false;
                 return isException! ? Ok("Test") : throw new Exception("Deneme bir hata fırlatıldı. Test apisinden");
             }
-            catch (Exception ex)
+            catch (Exception? ex)
             {
-                logger.LogError(ex, ex.Message);
-                return BadRequest(ex.ToString());
+                logger.LogError(ex!, ex.Message!, "Logger Test");
+                return BadRequest(ex!.ToString());
             }
         }
     }
