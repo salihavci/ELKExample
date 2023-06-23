@@ -18,7 +18,16 @@ namespace ELKExample.Controllers
         [HttpPost("Test")]
         public IActionResult Test()
         {
-            return Ok("Test");
+            try
+            {
+                var isException = true;
+                return !isException! ? Ok("Test") : throw new Exception("Deneme bir hata fırlatıldı. Test apisinden");
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, ex.Message);
+                return BadRequest(ex.ToString());
+            }
         }
     }
 }
