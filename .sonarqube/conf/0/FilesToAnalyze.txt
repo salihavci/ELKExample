@@ -1,0 +1,13 @@
+﻿E:\ELK_EX\ELKExample\ELKExample\Common\LoggingExtension.cs
+E:\ELK_EX\ELKExample\ELKExample\Controllers\HomeController.cs
+E:\ELK_EX\ELKExample\ELKExample\Controllers\WeatherForecastController.cs
+E:\ELK_EX\ELKExample\ELKExample\Program.cs
+E:\ELK_EX\ELKExample\ELKExample\WeatherForecast.cs
+E:\ELK_EX\ELKExample\ELKExample\obj\Debug\net6.0\ELKExample.GlobalUsings.g.cs
+E:\ELK_EX\ELKExample\ELKExample\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+E:\ELK_EX\ELKExample\ELKExample\obj\Debug\net6.0\ELKExample.AssemblyInfo.cs
+E:\ELK_EX\ELKExample\ELKExample\obj\Debug\net6.0\ELKExample.MvcApplicationPartsAssemblyInfo.cs
+E:\ELK_EX\ELKExample\ELKExample\web.config
+E:\ELK_EX\ELKExample\ELKExample\appsettings.Development.json
+E:\ELK_EX\ELKExample\ELKExample\appsettings.json
+E:\ELK_EX\ELKExample\ELKExample\Properties\launchSettings.json
