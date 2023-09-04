@@ -36,7 +36,7 @@ steps:
   inputs:
     command: 'build'
     projects: '**/*.csproj'
-    arguments: '--configuration $(buildConfiguration)'
+    arguments: '--configuration $(buildConfiguration) /p:PackageLocation = "$(Build.ArtifactStagingDirectory)"\\'
 
 - task: DotNetCoreCLI@2
   displayName: "Dotnet Test Task"
