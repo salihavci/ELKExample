@@ -51,7 +51,7 @@ steps:
     SonarCloud: 'SonarCloud Connection'
     organization: 'salihavci'
     scannerMode: 'MSBuild'
-    projectKey: 'ELKExample'
+    projectKey: 'salihavci_ELKExample'
     projectName: 'ELKExample'
 
 - task: SonarCloudAnalyze@1
