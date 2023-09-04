@@ -24,6 +24,16 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
+
+- task: SonarCloudPrepare@1
+  displayName: "Sonarcloud Prepare Task"
+  inputs:
+    SonarCloud: 'SonarCloud Connection'
+    organization: 'salihavci'
+    scannerMode: 'MSBuild'
+    projectKey: 'salihavci_ELKExample'
+    projectName: 'ELKExample'
+
 - task: DotNetCoreCLI@2
   displayName: "Dotnet Restore Task"
   inputs:
@@ -45,15 +55,6 @@ steps:
     projects: '**/*Tests/*.csproj'
     arguments: '--configuration $(buildConfiguration) --collect "Code coverage"'
     
-- task: SonarCloudPrepare@1
-  displayName: "Sonarcloud Prepare Task"
-  inputs:
-    SonarCloud: 'SonarCloud Connection'
-    organization: 'salihavci'
-    scannerMode: 'MSBuild'
-    projectKey: 'salihavci_ELKExample'
-    projectName: 'ELKExample'
-
 - task: SonarCloudAnalyze@1
   inputs:
     jdkversion: 'JAVA_HOME_17_X64'
