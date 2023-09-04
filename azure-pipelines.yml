@@ -45,6 +45,24 @@ steps:
     projects: '**/*Tests/*.csproj'
     arguments: '--configuration $(buildConfiguration) --collect "Code coverage"'
     
+- task: SonarCloudPrepare@1
+  displayName: "Sonarcloud Prepare Task"
+  inputs:
+    SonarCloud: 'SonarCloud Connection'
+    organization: 'salihavci'
+    scannerMode: 'MSBuild'
+    projectKey: 'ELKExample'
+    projectName: 'ELKExample'
+
+- task: SonarCloudAnalyze@1
+  inputs:
+    jdkversion: 'JAVA_HOME_17_X64'
+
+- task: SonarCloudPublish@1
+  displayName: "Sonarcloud Publish Task"
+  inputs:
+    pollingTimeoutSec: '300'
+
 - task: DotNetCoreCLI@2
   displayName: "Dotnet Publish Task"
   inputs:
