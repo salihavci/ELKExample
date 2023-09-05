@@ -68,7 +68,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      $QualityGateResult = Invoke-RestMethod -Method Get -Uri 
+      $QualityGateResult = Invoke-RestMethod -Method Get -System.Uri 
       "https://sonarcloud.io/api/qualitygates/project_status?projectKey=salihavci_ELKExample" 
       -Headers $Headers
        $QualityGateResult | ConvertTo-Json | Write-Host
