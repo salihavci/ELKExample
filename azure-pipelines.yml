@@ -69,11 +69,11 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      $token = [System.Text.Encoding]::UTF8.GetBytes("057319436f1c73562a2814752af27cc4cdda6197" + ":")
+      $token = [System.Text.Encoding]::UTF8.GetBytes(${env:SONARTOKEN} + ":")
       $base64 = [System.Convert]::ToBase64String($token)
       
       $basicAuth = [string]::Format("Basic {0}", $base64)
-      $Headers = @{ Authorization = @$basicAuth }
+      $Headers = @{ Authorization = $basicAuth }
       
       $QualityGateResult = Invoke-RestMethod -Method Get -Uri https://sonarcloud.io/api/qualitygates/project_status?projectKey=salihavci_ELKExample 
       -Headers $Headers
